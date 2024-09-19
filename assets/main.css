@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+
+a,
+button {
+  @apply transition-all duration-500;
+}
+
+button {
+  @apply px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md;
+}
+
+button[role="tab"] {
+  @apply rounded-none sm:rounded-md sm:rounded-b-none;
+}
+
+button[aria-selected="true"] {
+  @apply bg-blue-700;
+}
+
+img {
+  @apply max-w-full h-auto;
+}
+
+.modal {
+  @apply fixed top-0 left-0 w-full h-full px-8 bg-black/75 backdrop-blur z-10;
+}
+
+.modal-inner {
+  @apply flex flex-col gap-8 max-w-[50rem] m-auto my-16 p-8 bg-white rounded-md;
+}
+
+.card {
+  @apply bg-white shadow-sm rounded-md p-8 rich-text;
+}
+
+*[disabled] {
+  @apply pointer-events-none select-none opacity-40;
+}
+
+.tab-panel {
+  @apply p-4 border-2 border-blue-700;
+}
+
+@tailwind utilities;
+
+@layer utilities {
+  .rich-text {
+    @apply flex flex-col gap-4;
+  }
+}
