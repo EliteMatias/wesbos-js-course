@@ -67,6 +67,30 @@
         <div role="tabpanel" aria-labelledby="tab-three" hidden class="tab-panel">
           <p>Tab Three Content</p>
         </div>
+      </div>
+    </div>
+
+    <!-- Arrays and Maps -->
+    <div class="px-4 py-16">
+      <h2 class="text-2xl font-semibold text-center">Sarcastic Text Generator</h2>
+      <div class="h-8"></div>
+      <div class="flex flex-col gap-4 max-w-3xl mx-auto">
+        <label for="sarcastic">
+          <input type="radio" name="filter" id="sarcastic" value="sarcastic" checked>
+          Sarcastic
+        </label>
+        <label for="funky">
+          <input type="radio" name="filter" id="funky" value="funky">
+          Funky
+        </label>
+        <label for="unable">
+          <input type="radio" name="filter" id="unable" value="unable">
+          Unable to structure a sentence
+        </label>
+
+        <textarea name="text" id="" class="border p-2 align-top"></textarea>
+        <p class="result"></p>
+      </div>
     </div>
 
     <!-- Gallery -->
@@ -86,6 +110,7 @@
   <script src="assets/components/modal.js"></script>
   <script src="assets/components/scroll.js"></script>
   <script src="assets/components/tabs.js"></script>
+  <script src="assets/components/sarcastic-text.js"></script>
   <script src="assets/components/gallery.js"></script>
 </body>
 </html>
