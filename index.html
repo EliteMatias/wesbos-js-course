@@ -1,116 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Javascript Course</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Course</title>
 
-  <link rel="stylesheet" href="assets/main.css">
-</head>
-<body class="flex flex-col">
-  <aside class="modal hidden"><div class="modal-inner"></div></aside>
+    <link rel="stylesheet" href="assets/main.css" />
+  </head>
+  <body class="flex flex-col">
+    <header class="p-4 bg-slate-200">
+      <h1 class="text-4xl font-bold text-center">Javascript Course</h1>
+    </header>
 
-  <header class="p-4 bg-slate-200">
-    <h1 class="text-4xl font-bold text-center">Javascript Course</h1>
-  </header>
+    <main class="min-h-screen">
+      <!-- Modal -->
+      <div class="px-4 py-16 bg-slate-100">
+        <h2 class="text-2xl font-semibold text-center">Click Outside Modal</h2>
+        <div class="h-8"></div>
+        <div class="flex flex-wrap justify-center gap-8">
+          <div class="card" data-name="John Doe">
+            <p>Hi, I am John Doe.</p>
+            <img
+              src="https://picsum.photos/600?random=1"
+              alt=""
+              class="max-w-[200px]"
+            />
+            <button>Press me!</button>
+          </div>
 
-  <main class="min-h-screen">
-
-    <!-- Modal -->
-    <div class="px-4 py-16 bg-slate-100">
-      <h2 class="text-2xl font-semibold text-center">Click Outside Modal</h2>
-      <div class="h-8"></div>
-      <div class="flex flex-wrap justify-center gap-8">
-        <div class="card" data-name="John Doe">
-          <p>Hi, I am John Doe.</p>
-          <img src="https://picsum.photos/600?random=1" alt="" class="max-w-[200px]">
-          <button>Press me!</button>
-        </div>
-
-        <div class="card" data-name="Jane Deer">
-          <p>Hello, call me Jane Deer.</p>
-          <img src="https://picsum.photos/600?random=2" alt="" class="max-w-[200px]">
-          <button>Click this!</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Scroll Event and Intersection Observer -->
-    <div class="px-4 py-16">
-      <h2 class="text-2xl font-semibold text-center">Scroll Events and Intersection Observer</h2>
-      <div class="h-8"></div>
-      <div class="flex flex-col justify-center gap-4 ">
-        <div class="scrollable max-w-96 w-full h-96 bg-slate-100 rounded-sm mx-auto overflow-y-auto p-4">
-          <div class="w-full h-[100rem] bg-red-500 rounded-sm"></div>
-          <div class="scrollable-end"></div>
-        </div>
-        <button class="btn btn-scrollable inline-block mx-auto" disabled>You've reach the end!</button>
-      </div>
-    </div>
-
-    <!-- Tabs -->
-    <div class="px-4 py-16 bg-slate-100">
-      <h2 class="text-2xl font-semibold text-center">Tabs</h2>
-      <div class="h-8"></div>
-      <div class="tabs max-w-[900px] mx-auto">
-        <div role="tablist" aria-label="Tabs" class="flex flex-col sm:flex-row">
-          <button role="tab" aria-selected="true" id="tab-one">Tab One</button>
-          <button role="tab" aria-selected="false" id="tab-two">Tab Two</button>
-          <button role="tab" aria-selected="false" id="tab-three">Tab Three</button>
-        </div>
-        <div role="tabpanel" aria-labelledby="tab-one" class="tab-panel">
-          <p>Tab One Content</p>
-        </div>
-        <div role="tabpanel" aria-labelledby="tab-two" hidden class="tab-panel">
-          <p>Tab Two Content</p>
-        </div>
-        <div role="tabpanel" aria-labelledby="tab-three" hidden class="tab-panel">
-          <p>Tab Three Content</p>
+          <div class="card" data-name="Jane Deer">
+            <p>Hello, call me Jane Deer.</p>
+            <img
+              src="https://picsum.photos/600?random=2"
+              alt=""
+              class="max-w-[200px]"
+            />
+            <button>Click this!</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Arrays and Maps -->
-    <div class="px-4 py-16">
-      <h2 class="text-2xl font-semibold text-center">Sarcastic Text Generator</h2>
-      <div class="h-8"></div>
-      <div class="flex flex-col gap-4 max-w-3xl mx-auto">
-        <label for="sarcastic">
-          <input type="radio" name="filter" id="sarcastic" value="sarcastic" checked>
-          Sarcastic
-        </label>
-        <label for="funky">
-          <input type="radio" name="filter" id="funky" value="funky">
-          Funky
-        </label>
-        <label for="unable">
-          <input type="radio" name="filter" id="unable" value="unable">
-          Unable to structure a sentence
-        </label>
+      <aside class="modal hidden">
+        <div class="modal-inner"><div class="modal-inner--content"></div></div>
+      </aside>
 
-        <textarea name="text" id="" class="border p-2 align-top"></textarea>
-        <p class="result"></p>
+      <!-- Scroll Event and Intersection Observer -->
+      <div class="px-4 py-16">
+        <h2 class="text-2xl font-semibold text-center">
+          Scroll Events and Intersection Observer
+        </h2>
+        <div class="h-8"></div>
+        <div class="flex flex-col justify-center gap-4">
+          <div
+            class="scrollable max-w-96 w-full h-96 bg-slate-100 rounded-sm mx-auto overflow-y-auto p-4"
+          >
+            <div class="w-full h-[100rem] bg-red-500 rounded-sm"></div>
+            <div class="scrollable-end"></div>
+          </div>
+          <button class="btn btn-scrollable inline-block mx-auto" disabled>
+            You've reach the end!
+          </button>
+        </div>
       </div>
-    </div>
 
-    <!-- Gallery -->
-    <div class="px-4 py-16">
-      <h2 class="text-2xl font-semibold text-center">Gallery</h2>
-      <div class="h-8"></div>
-      <div class="flex flex-col justify-center gap-4 ">
-
+      <!-- Tabs -->
+      <div class="px-4 py-16 bg-slate-100">
+        <h2 class="text-2xl font-semibold text-center">Tabs</h2>
+        <div class="h-8"></div>
+        <div class="tabs max-w-[900px] mx-auto">
+          <div
+            role="tablist"
+            aria-label="Tabs"
+            class="flex flex-col sm:flex-row"
+          >
+            <button role="tab" aria-selected="true" id="tab-one">
+              Tab One
+            </button>
+            <button role="tab" aria-selected="false" id="tab-two">
+              Tab Two
+            </button>
+            <button role="tab" aria-selected="false" id="tab-three">
+              Tab Three
+            </button>
+          </div>
+          <div role="tabpanel" aria-labelledby="tab-one" class="tab-panel">
+            <p>Tab One Content</p>
+          </div>
+          <div
+            role="tabpanel"
+            aria-labelledby="tab-two"
+            hidden
+            class="tab-panel"
+          >
+            <p>Tab Two Content</p>
+          </div>
+          <div
+            role="tabpanel"
+            aria-labelledby="tab-three"
+            hidden
+            class="tab-panel"
+          >
+            <p>Tab Three Content</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </main>
 
-  <footer class="p-4 bg-slate-200">
-    <p class="text-center font-semibold">Footer</p>
-  </footer>
+      <!-- Arrays and Maps -->
+      <div class="px-4 py-16">
+        <h2 class="text-2xl font-semibold text-center">
+          Sarcastic Text Generator
+        </h2>
+        <div class="h-8"></div>
+        <div class="flex flex-col gap-4 max-w-3xl mx-auto">
+          <label for="sarcastic">
+            <input
+              type="radio"
+              name="filter"
+              id="sarcastic"
+              value="sarcastic"
+              checked
+            />
+            Sarcastic
+          </label>
+          <label for="funky">
+            <input type="radio" name="filter" id="funky" value="funky" />
+            Funky
+          </label>
+          <label for="unable">
+            <input type="radio" name="filter" id="unable" value="unable" />
+            Unable to structure a sentence
+          </label>
 
-  <script src="assets/components/modal.js"></script>
-  <script src="assets/components/scroll.js"></script>
-  <script src="assets/components/tabs.js"></script>
-  <script src="assets/components/sarcastic-text.js"></script>
-  <script src="assets/components/gallery.js"></script>
-</body>
+          <textarea name="text" id="" class="border p-2 align-top"></textarea>
+          <p class="result"></p>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <div class="px-4 py-16 bg-slate-100">
+        <h2 class="text-2xl font-semibold text-center">Gallery</h2>
+        <div class="h-8"></div>
+        <div class="flex flex-col justify-center gap-8">
+          <h3 class="text-xl font-medium text-center">Gallery One</h3>
+          <div
+            id="gallery-one"
+            class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto"
+          >
+            <img
+              src="https://picsum.photos/600?random=3"
+              alt=""
+              class=""
+              tabindex="0"
+            />
+            <img
+              src="https://picsum.photos/600?random=4"
+              alt=""
+              class=""
+              tabindex="0"
+            />
+            <img
+              src="https://picsum.photos/600?random=5"
+              alt=""
+              class=""
+              tabindex="0"
+            />
+          </div>
+
+          <h3 class="text-xl font-medium text-center">Gallery Two</h3>
+          <div
+            id="gallery-two"
+            class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto"
+          >
+            <img
+              src="https://picsum.photos/600?random=6"
+              alt=""
+              class=""
+              tabindex="0"
+            />
+            <img
+              src="https://picsum.photos/600?random=7"
+              alt=""
+              class=""
+              tabindex="0"
+            />
+            <img
+              src="https://picsum.photos/600?random=8"
+              alt=""
+              class=""
+              tabindex="0"
+            />
+          </div>
+        </div>
+      </div>
+
+      <aside class="modal-gallery hidden">
+        <div class="modal-inner">
+          <div class="modal-inner--content">
+            <img src="assets/img/placeholder.jpg" alt="" />
+
+            <div class="nav flex items-center justify-center gap-4">
+              <button aria-label="Previous Photo" class="btn btn-prev">
+                Prev
+              </button>
+              <button aria-label="Next Photo" class="btn btn-next">Next</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="p-4 bg-slate-200">
+      <p class="text-center font-semibold">Footer</p>
+    </footer>
+
+    <script src="assets/components/modal.js"></script>
+    <script src="assets/components/scroll.js"></script>
+    <script src="assets/components/tabs.js"></script>
+    <script src="assets/components/sarcastic-text.js"></script>
+    <script src="assets/components/gallery.js"></script>
+  </body>
 </html>
