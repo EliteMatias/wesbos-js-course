@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "bmewburn.vscode-intelephense-client",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "MehediDracula.php-namespace-resolver"
+  ]
+}
