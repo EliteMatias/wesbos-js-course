@@ -1,6 +1,7 @@
 const cardButtons = document.querySelectorAll('.card button');
+const cardImages = document.querySelectorAll('.card img');
 const modal = document.querySelector('.modal');
-const modalInner = modal.querySelector('.modal-inner');
+const modalInnerContent = modal.querySelector('.modal-inner--content');
 
 function handleCardButtonClick(event) {
   const button = event.currentTarget;
@@ -9,7 +10,7 @@ function handleCardButtonClick(event) {
   const name = card.dataset.name;
   const img = card.querySelector('img').src;
 
-  modalInner.innerHTML = `
+  modalInnerContent.innerHTML = `
     <img src="${img}" alt="">
     <p>You've clicked this card: ${name}</p>
   `;
@@ -22,6 +23,10 @@ function closeModal() {
 }
 
 cardButtons.forEach(function(button) {
+  button.addEventListener('click', handleCardButtonClick);
+});
+
+cardImages.forEach(function(button) {
   button.addEventListener('click', handleCardButtonClick);
 });
 

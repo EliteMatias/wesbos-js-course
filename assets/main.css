@@ -22,12 +22,17 @@ img {
   @apply max-w-full h-auto;
 }
 
-.modal {
-  @apply fixed top-0 left-0 w-full h-full px-8 bg-black/75 backdrop-blur z-10;
+.modal,
+.modal-gallery {
+  @apply flex justify-center items-center fixed top-0 left-0 w-full h-full px-8 bg-black/75 backdrop-blur z-10;
 }
 
 .modal-inner {
-  @apply flex flex-col gap-8 max-w-[50rem] m-auto my-16 p-8 bg-white rounded-md;
+  @apply flex items-center justify-center h-[80vh] max-w-[50rem] m-auto my-16 p-8 bg-white rounded-md;
+}
+
+.modal-inner--content {
+  @apply flex flex-col items-center self-start gap-8;
 }
 
 .card {
