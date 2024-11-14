@@ -42,6 +42,28 @@ img {
   @apply p-4 border-2 border-blue-700;
 }
 
+.slides {
+  @apply relative overflow-hidden w-96 h-96 mx-auto;
+}
+
+.slide {
+  @apply grid content-center justify-center z-10 absolute transition-all duration-300 w-full h-full bg-slate-500 transform -translate-x-[200%];
+
+  &.prev {
+    @apply transform -translate-x-full;
+  }
+  &.current {
+    @apply transform translate-x-0;
+  }
+  &.next {
+    @apply transform translate-x-full;
+
+    + .slide {
+      @apply transform translate-x-[200%];
+    }
+  }
+}
+
 @tailwind utilities;
 
 @layer utilities {
