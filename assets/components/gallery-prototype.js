@@ -101,5 +101,3 @@ Gallery.prototype.showImage = function (el) {
 
 const galleryOne = new Gallery(document.querySelector("#gallery-one"));
 const galleryTwo = new Gallery(document.querySelector("#gallery-two"));
-
-console.log(galleryOne, galleryTwo);
