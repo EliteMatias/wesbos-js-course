@@ -24,7 +24,7 @@ img {
 
 .modal,
 .modal-gallery {
-  @apply flex justify-center items-center fixed top-0 left-0 w-full h-full px-8 bg-black/75 backdrop-blur z-10;
+  @apply flex justify-center items-center fixed top-0 left-0 w-full h-full px-8 bg-black/75 backdrop-blur z-20;
 }
 
 .modal-inner {
