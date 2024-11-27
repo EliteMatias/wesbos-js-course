@@ -22,6 +22,10 @@ img {
   @apply max-w-full h-auto;
 }
 
+.btn {
+  @apply inline-block;
+}
+
 .modal,
 .modal-gallery {
   @apply flex justify-center items-center fixed top-0 left-0 w-full h-full px-8 bg-black/75 backdrop-blur z-20;
