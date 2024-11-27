@@ -49,6 +49,7 @@ const currencies = {
   TRY: "Turkish Lira",
   ZAR: "South African Rand",
   EUR: "Euro",
+  PHP: "Philippine Peso",
 };
 
 function generateOptions(options) {
