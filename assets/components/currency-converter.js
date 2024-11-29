@@ -1,6 +1,7 @@
 const myHeaders = new Headers();
+const apikey = "DBspOWqkznCJPChTD7MI436WPMFURXJw";
 
-myHeaders.append("apikey", "DBspOWqkznCJPChTD7MI436WPMFURXJw");
+myHeaders.append("apikey", apikey);
 
 const requestOptions = {
   method: "GET",
@@ -12,7 +13,7 @@ const fromSelect = document.querySelector("[name=from_currency]");
 const fromInput = document.querySelector("[name=from_amount]");
 const toSelect = document.querySelector("[name=to_currency]");
 const toEl = document.querySelector(".to_amount");
-const form = document.querySelector(".app form");
+const form = document.querySelector(".currency-app form");
 const endpoint = "https://api.apilayer.com/exchangerates_data/latest";
 const ratesByBase = {};
 
