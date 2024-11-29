@@ -249,7 +249,7 @@
           class="currency-app flex flex-col justify-center gap-8 max-w-3xl mx-auto"
         >
           <form class="grid md:grid-cols-2 gap-4">
-            <input type="number" name="from_amount" class="border" />
+            <input type="number" name="from_amount" class="border" value="0" />
             <select name="from_currency" class="border">
               <option>Select a Currency</option>
             </select>
@@ -275,6 +275,9 @@
     <script src="assets/components/gallery-prototype.js"></script>
     <script src="assets/components/slider-prototype.js"></script>
     <script src="assets/components/dad-joke.js"></script>
-    <script src="assets/components/currency-converter.js"></script>
+    <script
+      src="assets/components/currency-converter-module.js"
+      type="module"
+    ></script>
   </body>
 </html>
