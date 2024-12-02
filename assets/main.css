@@ -23,8 +23,15 @@ img {
 }
 
 form {
-  > * {
+  > *:not(button, fieldset) {
     @apply p-2 bg-slate-200;
+  }
+}
+
+fieldset {
+  @apply flex flex-col gap-4 p-8 bg-white;
+  > input {
+    @apply bg-slate-200 p-2;
   }
 }
 

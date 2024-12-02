@@ -230,8 +230,26 @@
         </div>
       </div>
 
-      <!-- Dad Joke -->
+      <!-- Prompt UI -->
       <div class="px-4 py-16 bg-slate-100">
+        <h2 class="text-2xl font-semibold text-center">Prompt UI</h2>
+        <div class="h-8"></div>
+        <div
+          class="flex flex-row flex-wrap justify-center gap-8 max-w-3xl mx-auto"
+        >
+          <button class="askMe" data-question="What is your name?">
+            Enter Name
+          </button>
+          <button class="askMe" data-question="What is your age?" data-cancel>
+            Enter Age
+          </button>
+
+          <button class="ask-questions">Ask Questions</button>
+        </div>
+      </div>
+
+      <!-- Dad Joke -->
+      <div class="px-4 py-16">
         <h2 class="text-2xl font-semibold text-center">Dad Joke</h2>
         <div class="h-8"></div>
         <div class="flex flex-col justify-center gap-8 max-w-3xl mx-auto">
@@ -242,7 +260,7 @@
       </div>
 
       <!-- Currency Converter -->
-      <div class="px-4 py-16">
+      <div class="px-4 py-16 bg-slate-100">
         <h2 class="text-2xl font-semibold text-center">Currency Converter</h2>
         <div class="h-8"></div>
         <div
@@ -274,6 +292,7 @@
     <script src="assets/components/sarcastic-text.js"></script>
     <script src="assets/components/gallery-prototype.js"></script>
     <script src="assets/components/slider-prototype.js"></script>
+    <script src="assets/components/prompt-ui.js"></script>
     <script src="assets/components/dad-joke-modules.js" type="module"></script>
     <script
       src="assets/components/currency-converter-modules.js"
