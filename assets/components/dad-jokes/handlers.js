@@ -1,5 +1,5 @@
 import { fetchJoke } from "./lib.js";
-import { jokeLoader, jokeButton, jokeHolder } from "../dad-jokes/elements.js";
+import { jokeLoader, jokeButton, jokeHolder } from "./elements.js";
 import { randomItemFromArray } from "./utils.js";
 import { buttonText } from "./vars.js";
 
