@@ -1,4 +1,4 @@
-import { initCurrencyConverter } from "./init/init.js";
+import { initCurrencyConverter } from "./currency-converter/init.js";
 
 const app = document.querySelector(".currency-app");
 app.addEventListener("mouseenter", initCurrencyConverter, { once: true });

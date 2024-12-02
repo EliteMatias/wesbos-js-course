@@ -1,4 +1,4 @@
-import { handleClick } from "./handlers/dad-jokes-handlers.js";
-import { jokeButton } from "./elements/dad-jokes-elements.js";
+import { handleClick } from "./dad-jokes/handlers.js";
+import { jokeButton } from "./dad-jokes/elements.js";
 
 jokeButton.addEventListener("click", handleClick);
