@@ -81,8 +81,7 @@ const questions = [
 async function asyncMap(array, callback) {
   const results = [];
   for (const item of array) {
-    const result = await callback(item);
-    results.push(result);
+    results.push(await callback(item));
   }
   return results;
 }
